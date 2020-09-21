@@ -1,0 +1,6 @@
+BookStore/bin/
+BookStore/obj/
+BookStore.Domain/bin/
+BookStore.Domain/obj/
+BookStore.Infrastructure/bin/
+BookStore.Infrastructure/obj/
