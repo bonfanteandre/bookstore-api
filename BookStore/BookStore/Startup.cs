@@ -1,4 +1,8 @@
 using BookStore.Domain.Contracts.Repositories;
+using BookStore.Domain.Contracts.Validators;
+using BookStore.Domain.Contracts.Workflows;
+using BookStore.Domain.Validation.Validators;
+using BookStore.Domain.Workflows;
 using BookStore.Infrastructure.Context;
 using BookStore.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
@@ -27,6 +31,8 @@ namespace BookStore
                 options.UseSqlServer(Configuration.GetConnectionString("defaultconnection")));
 
             services.AddScoped<IBooksRepository, BooksRepository>();
+            services.AddScoped<IBooksValidator, BooksValidator>();
+            services.AddScoped<IBooksWorklflow, BooksWorkflow>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -36,11 +42,7 @@ namespace BookStore
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
-
             app.UseRouting();
-
-            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

@@ -20,6 +20,7 @@ namespace BookStore.Infrastructure.Repositories
         public void Add(Book book)
         {
             _context.Books.Add(book);
+            _context.SaveChanges();
         }
 
         public ICollection<Book> AllOrderedByName()
@@ -35,11 +36,13 @@ namespace BookStore.Infrastructure.Repositories
         public void Remove(Book book)
         {
             _context.Books.Remove(book);
+            _context.SaveChanges();
         }
 
         public void Update(Book book)
         {
             _context.Books.Update(book);
+            _context.SaveChanges();
         }
     }
 }

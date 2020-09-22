@@ -1,4 +1,6 @@
 ﻿using BookStore.Domain.Commands;
+using BookStore.Domain.Validation;
+using BookStore.Domain.Validation.Errors;
 using System;
 using System.Collections.Generic;
 using System.Text;
