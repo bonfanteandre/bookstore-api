@@ -26,6 +26,7 @@ namespace BookStore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddCors();
 
             services.AddDbContext<BookStoreContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("defaultconnection")));
@@ -42,6 +43,7 @@ namespace BookStore
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(option => option.AllowAnyOrigin());
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
