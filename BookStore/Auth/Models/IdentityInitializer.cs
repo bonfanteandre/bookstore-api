@@ -41,7 +41,7 @@ namespace BookStore.Auth.Models
         {
             if (_userManager.FindByNameAsync(user.UserName).Result == null)
             {
-                var res = _userManager.CreateAsync(user, password);
+                _userManager.CreateAsync(user, password);
             }
         }
     }
