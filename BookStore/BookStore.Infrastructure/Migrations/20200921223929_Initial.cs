@@ -14,7 +14,7 @@ namespace BookStore.Infrastructure.Migrations
                     Id = table.Column<Guid>(nullable: false),
                     Title = table.Column<string>(nullable: false),
                     ISBN = table.Column<string>(nullable: false),
-                    LauchYear = table.Column<int>(nullable: false),
+                    LaunchYear = table.Column<int>(nullable: false),
                     Author = table.Column<string>(nullable: false),
                     Category = table.Column<string>(nullable: false)
                 },

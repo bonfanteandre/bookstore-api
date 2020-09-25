@@ -12,7 +12,7 @@ namespace BookStore.Domain
         public Guid Id { get; private set; }
         public string Title { get; private set; }
         public string ISBN { get; private set; }
-        public int LauchYear { get; private set; }
+        public int LaunchYear { get; private set; }
         public string Author { get; private set; }
         public string Category { get; private set; }
 
@@ -23,7 +23,7 @@ namespace BookStore.Domain
                 Id = Guid.NewGuid(),
                 Title = bookCommand.Title,
                 ISBN = bookCommand.ISBN,
-                LauchYear = bookCommand.LauchYear,
+                LaunchYear = bookCommand.LaunchYear,
                 Author = bookCommand.Author,
                 Category = bookCommand.Category
             };
@@ -33,7 +33,7 @@ namespace BookStore.Domain
         {
             Title = bookCommand.Title;
             ISBN = bookCommand.ISBN;
-            LauchYear = bookCommand.LauchYear;
+            LaunchYear = bookCommand.LaunchYear;
             Author = bookCommand.Author;
             Category = bookCommand.Category;
         }

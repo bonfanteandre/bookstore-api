@@ -54,5 +54,10 @@ namespace BookStore.Domain.Workflows
         {
             return _booksRepository.AllOrderedByName();
         }
+
+        public Book Find(Guid id)
+        {
+            return _booksRepository.Find(id);
+        }
     }
 }

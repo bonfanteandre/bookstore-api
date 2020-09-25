@@ -1,4 +1,5 @@
-﻿using BookStore.Domain.Commands;
+﻿using BookStore.Domain;
+using BookStore.Domain.Commands;
 using BookStore.Domain.Contracts.Workflows;
 using BookStore.Domain.Validation.Exception;
 using BookStore.Domain.Workflows;
@@ -25,6 +26,14 @@ namespace BookStore.API.Controllers
         {
             var books = _booksWorkflow.AllOrderedByName();
             return Ok(books);
+        }
+
+        [HttpGet]
+        [Route("{id:guid}")]
+        public IActionResult Find([FromRoute] Guid id)
+        {
+            Book book = _booksWorkflow.Find(id);
+            return Ok(book);
         }
 
         [HttpPost]
@@ -58,7 +67,7 @@ namespace BookStore.API.Controllers
 
         [HttpDelete]
         [Route("{id:guid}")]
-        public IActionResult Add([FromRoute] Guid id)
+        public IActionResult Remove([FromRoute] Guid id)
         {
             _booksWorkflow.Remove(id);
             return Ok();

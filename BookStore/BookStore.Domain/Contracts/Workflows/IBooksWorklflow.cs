@@ -11,5 +11,6 @@ namespace BookStore.Domain.Contracts.Workflows
         void Update(Guid id, BookCommand bookCommand);
         void Remove(Guid id);
         ICollection<Book> AllOrderedByName();
+        Book Find(Guid id);
     }
 }

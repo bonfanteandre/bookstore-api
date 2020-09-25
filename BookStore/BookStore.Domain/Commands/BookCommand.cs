@@ -8,7 +8,7 @@ namespace BookStore.Domain.Commands
     {
         public string Title { get; set; }
         public string ISBN { get; set; }
-        public int LauchYear { get; set; }
+        public int LaunchYear { get; set; }
         public string Author { get; set; }
         public string Category { get; set; }
     }

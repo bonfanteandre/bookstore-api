@@ -28,7 +28,7 @@ namespace BookStore.Domain.Validation.Validators
                 _validationErrors.Add(new ValidationError("ISBN é um campo obrigatório"));
             }
 
-            if (book.LauchYear <= 0 || book.LauchYear > DateTime.Now.Year)
+            if (book.LaunchYear <= 0 || book.LaunchYear > DateTime.Now.Year)
             {
                 _validationErrors.Add(new ValidationError("Ano de lançamento inválido"));
             }

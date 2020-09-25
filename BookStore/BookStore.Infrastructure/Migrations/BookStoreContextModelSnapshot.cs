@@ -34,7 +34,7 @@ namespace BookStore.Infrastructure.Migrations
                     b.Property<string>("ISBN")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("LauchYear")
+                    b.Property<int>("LaunchYear")
                         .HasColumnType("int");
 
                     b.Property<string>("Title")
