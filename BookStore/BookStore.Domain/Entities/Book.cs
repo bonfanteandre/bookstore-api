@@ -29,6 +29,20 @@ namespace BookStore.Domain
             };
         }
 
+        public Book()
+        {
+        }
+
+        public Book(Guid id, string title, string iSBN, int launchYear, string author, string category)
+        {
+            Id = id;
+            Title = title;
+            ISBN = iSBN;
+            LaunchYear = launchYear;
+            Author = author;
+            Category = category;
+        }
+
         public void Update(BookCommand bookCommand)
         {
             Title = bookCommand.Title;

@@ -4,3 +4,5 @@ BookStore.Domain/bin/
 BookStore.Domain/obj/
 BookStore.Infrastructure/bin/
 BookStore.Infrastructure/obj/
+BookStore.Tests/bin/
+BookStore.Tests/obj/
