@@ -78,7 +78,7 @@ namespace BookStore
             new IdentityInitializer(context, userManager, roleManager).Initialize();
 
             app.UseRouting();
-
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

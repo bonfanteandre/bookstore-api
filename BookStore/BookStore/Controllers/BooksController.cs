@@ -3,6 +3,7 @@ using BookStore.Domain.Commands;
 using BookStore.Domain.Contracts.Workflows;
 using BookStore.Domain.Validation.Exception;
 using BookStore.Domain.Workflows;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace BookStore.API.Controllers
 {
+    [Authorize("Bearer")]
     [Route("books")]
     public class BooksController : ControllerBase
     {
